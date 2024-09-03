@@ -15,10 +15,18 @@ html, body {
 	margin: 0;
 }
 
+
+
 body {
 	background-color: #D5E1EF;
 	font-family: 'Outfit', sans-serif;
 	overflow-x: hidden;
+
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center; 
+	align-items: center; 
+	min-height: 100vh; 
 }
 
 .container {
