@@ -12,7 +12,8 @@
 
 body {
 	background-color: #D5E1EF;
-	font-family: 'Outfit', sans-serif;;
+	font-family: 'Outfit', sans-serif;
+	overflow-x: hidden;
 }
 
 .container {
