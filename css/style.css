@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -15,15 +22,22 @@ body {
 }
 
 .row {
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr;
 	grid-template-columns: repeat(12, 1fr);
 	grid-gap: 15px;
-	justify-content: center;
-	align-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 	min-height: 100hv;
 }
 
 .col {
+	-ms-grid-column: 5;
+	-ms-grid-column-span: 4;
 	grid-column: 5 / span 4;
 	color: black;
 	text-align: center;
@@ -32,7 +46,6 @@ body {
 }
 
 footer {
-	position: fixed;
 	bottom: 0;
 	text-align: center;
 	width: 100%;
@@ -42,24 +55,32 @@ footer {
 
 @media (max-width: 950px) {
 	.col {
+		-ms-grid-column: 4;
+		-ms-grid-column-span: 6;
 		grid-column: 4 / span 6;
 	}
 }
 
 @media (max-width: 768px) {
 	.col {
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 8;
 		grid-column: 3 / span 8;
 	}
 }
 
 @media (max-width: 540px) {
 	.col {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 10;
 		grid-column: 2 / span 10;
 	}
 }
 
 @media (max-width: 375px) {
 	.col {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
 		grid-column: 1 / span 12;
 	}
 
@@ -69,20 +90,28 @@ footer {
 }
 
 #container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	gap: 16px;
 	background-color: #FFFF;
 	width: 82%;
 	margin: 0 auto;
 	border-radius: 20px;
-	box-shadow: 0 9px 25px rgb(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 9px 25px rgb(0, 0, 0, 0.1);
+	        box-shadow: 0 9px 25px rgb(0, 0, 0, 0.1);
 }
 
 .qrCode-container {
 	height: 50%;
 	width: 90%;
-	align-self: center;
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
 	margin-top: 5%;
 
 }
@@ -95,7 +124,9 @@ footer {
 
 #text-container {
 	width: 85%;
-	align-self: center;
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
 }
 
 #text-container h1 {
